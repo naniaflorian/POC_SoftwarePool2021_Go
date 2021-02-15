@@ -2,6 +2,7 @@ package main
 
 import (
 	"SofwareGoDay1/data"
+	"SofwareGoDay1/humanity"
 	"fmt"
 	"log"
 )
@@ -11,9 +12,11 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(str)
-	for i, v := range str {
-		fmt.Printf("%d", i)
-		data.LineToCSV(v)
+	for i := range str {
+		oui, _ := data.LineToCSV(str[i])
+		if ror != nil {
+			log.Fatal(err)
+		}
+		humanity.NewHumanFromCSV(oui)
 	}
 }

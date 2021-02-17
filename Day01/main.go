@@ -3,7 +3,6 @@ package main
 import (
 	"SofwareGoDay1/data"
 	"SofwareGoDay1/humanity"
-	"fmt"
 	"log"
 )
 
